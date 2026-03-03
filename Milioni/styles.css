@@ -1981,171 +1981,559 @@ body {
 
 
 
-/* Interactive Prompts Section */
+/* Universal Smooth Hover Effects for All Cards */
 
-.interactive-prompts {
-
-    padding: 4rem 0;
-
-    background: var(--color-white);
-
+/* Base smooth transition for all interactive elements */
+.feature-item,
+.benefit-card,
+.system-card,
+.blog-card,
+.methodology-item,
+.pdf-card,
+.stat-card-corporate,
+.main-card,
+.hero-card,
+.stat-item,
+.subject-card,
+.metric-card-enhanced {
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    will-change: transform, box-shadow;
 }
 
-
-
-.subject-grid {
-
-    display: grid;
-
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-
-    gap: 2rem;
-
-    margin-bottom: 3rem;
-
+/* Enhanced hover effects with smooth animations */
+.feature-item:hover,
+.system-card:hover,
+.blog-card:hover {
+    transform: translateY(-6px) scale(1.02) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12) !important;
+    border-color: var(--color-primary) !important;
 }
 
-
-
-.subject-card {
-
-    background: white;
-
-    border-radius: 16px;
-
-    padding: 2rem;
-
-    text-align: center;
-
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-    border: 1px solid #f3f4f6;
-
-    transition: all 0.3s ease;
-
-    cursor: pointer;
-
-    position: relative;
-
-    overflow: hidden;
-
+.benefit-card:hover {
+    transform: translateY(-4px) scale(1.01) !important;
+    box-shadow: 0 15px 35px rgba(139, 92, 246, 0.15) !important;
 }
 
-
-
-.subject-card::before {
-
-    content: '';
-
-    position: absolute;
-
-    top: 0;
-
-    left: 0;
-
-    right: 0;
-
-    height: 4px;
-
-    background: var(--color-primary);
-
-    transform: scaleX(0);
-
-    transition: transform 0.3s ease;
-
+.methodology-item:hover {
+    transform: translateY(-6px) scale(1.01) !important;
+    box-shadow: 
+        0 12px 30px rgba(139, 92, 246, 0.15),
+        0 0 0 1px rgba(139, 92, 246, 0.1) inset !important;
 }
 
-
-
-.subject-card:hover::before {
-
-    transform: scaleX(1);
-
+.pdf-card:hover {
+    transform: translateY(-6px) scale(1.02) !important;
+    box-shadow: 0 15px 35px rgba(239, 68, 68, 0.15) !important;
 }
 
+.stat-card-corporate:hover {
+    transform: translateY(-10px) scale(1.03) !important;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.2) !important;
+    border-color: rgba(255,255,255,0.4) !important;
+}
 
+.main-card:hover {
+    transform: translateY(-12px) scale(1.02) !important;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.3) !important;
+}
+
+.hero-card:hover {
+    transform: translateY(-8px) scale(1.01) !important;
+    box-shadow: 0 30px 60px rgba(103, 58, 183, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.3) !important;
+}
+
+.stat-item:hover {
+    transform: translateY(-10px) scale(1.03) !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12) !important;
+    border-color: rgba(59, 130, 246, 0.25) !important;
+}
 
 .subject-card:hover {
+    transform: translateY(-15px) scale(1.03) !important;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.12) !important;
+    border-color: rgba(59, 130, 246, 0.25) !important;
+}
 
-    transform: translateY(-8px);
+.metric-card-enhanced:hover {
+    transform: translateY(-12px) scale(1.02) !important;
+    box-shadow: 0 30px 50px rgba(0,0,0,0.15) !important;
+    border-color: rgba(255,255,255,0.25) !important;
+}
 
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+/* Smooth icon and element transitions */
+.feature-icon,
+.benefit-icon,
+.stat-icon,
+.subject-icon,
+.ai-icon-container {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
 
+.feature-item:hover .feature-icon,
+.benefit-card:hover .benefit-icon {
+    transform: scale(1.15) rotate(5deg) !important;
+}
+
+.stat-card-corporate:hover .stat-icon {
+    transform: scale(1.2) rotate(8deg) !important;
+}
+
+.subject-card:hover .subject-icon {
+    transform: scale(1.15) rotate(8deg) !important;
+}
+
+.main-card:hover .ai-icon-container {
+    transform: scale(1.08) rotate(3deg) !important;
+}
+
+/* Smooth border and background transitions */
+.feature-item::before,
+.system-card::before,
+.methodology-item::before {
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+/* Enhanced card overlay transitions */
+.card-gradient-overlay,
+.stat-item::before,
+.metric-card-enhanced::before {
+    transition: opacity 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+/* Smooth hover effects for buttons and interactive elements */
+button,
+.pill-btn,
+.hero-primary-btn,
+.hero-secondary-btn {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    will-change: transform, box-shadow;
+}
+
+button:hover,
+.pill-btn:hover,
+.hero-primary-btn:hover,
+.hero-secondary-btn:hover {
+    transform: translateY(-3px) scale(1.02) !important;
+}
+
+/* Smooth transitions for tags and badges */
+.subject-tags span,
+.section-badge-prompts,
+.hero-feature-tag {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+.subject-tags span:hover {
+    transform: translateY(-2px) scale(1.05) !important;
+}
+
+/* Performance optimization */
+@media (prefers-reduced-motion: reduce) {
+    .feature-item,
+    .benefit-card,
+    .system-card,
+    .blog-card,
+    .methodology-item,
+    .pdf-card,
+    .stat-card-corporate,
+    .main-card,
+    .hero-card,
+    .stat-item,
+    .subject-card,
+    .metric-card-enhanced {
+        transition: none !important;
+    }
+}
+
+/* Interactive Prompts Section - Enhanced Modern Design - White Theme */
+.interactive-prompts {
+    padding: 6rem 0;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.interactive-prompts::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 20%, rgba(59, 130, 246, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(139, 92, 246, 0.02) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Section Header Styles */
+.section-header-prompts {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.section-badge-prompts {
+    display: inline-block;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(139, 92, 246, 0.04));
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    color: #3b82f6;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.section-badge-prompts:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15);
+    border-color: rgba(59, 130, 246, 0.25);
+}
+
+.section-title-prompts {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    color: #1e293b;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.title-highlight {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200% 200%;
+    animation: gradient-shift 4s ease-in-out infinite;
+}
+
+.section-subtitle-prompts {
+    font-size: 1.3rem;
+    color: #64748b;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* Stats Bar Styles */
+.prompts-stats-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.stat-item {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.stat-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.02), rgba(139, 92, 246, 0.01));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.stat-item:hover::before {
+    opacity: 1;
+}
+
+.stat-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+    border-color: rgba(59, 130, 246, 0.2);
+}
+
+.stat-number {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #3b82f6;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.stat-label {
+    font-size: 0.95rem;
+    color: #64748b;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 1;
 }
 
 
+
+/* Enhanced Subject Grid - White Theme */
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Enhanced Subject Cards - White Theme */
+.subject-card {
+    background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.8));
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 24px;
+    padding: 2.5rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.02), rgba(139, 92, 246, 0.01));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.subject-card:hover .card-gradient-overlay {
+    opacity: 1;
+}
+
+.subject-icon-wrapper {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
 
 .subject-icon {
-
-    font-size: 3rem;
-
-    margin-bottom: 1rem;
-
+    font-size: 3.5rem;
     display: block;
-
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
 
-
+.card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .subject-card h3 {
-
-    color: #1f2937;
-
-    font-size: 1.5rem;
-
-    font-weight: 700;
-
-    margin-bottom: 0.5rem;
-
+    color: #1e293b;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.5px;
 }
-
-
 
 .subject-card p {
-
-    color: #6b7280;
-
-    font-size: 1rem;
-
+    color: #64748b;
+    font-size: 1.1rem;
     margin-bottom: 1.5rem;
-
+    font-weight: 500;
+    opacity: 0.9;
 }
-
-
 
 .subject-tags {
-
     display: flex;
-
     gap: 0.5rem;
-
     justify-content: center;
-
     flex-wrap: wrap;
-
+    margin-top: auto;
 }
-
-
 
 .subject-tags span {
-
-    background: #f1f5f9;
-
-    color: #475569;
-
-    padding: 0.25rem 0.75rem;
-
+    background: rgba(59, 130, 246, 0.08);
+    color: #3b82f6;
+    padding: 0.4rem 1rem;
     border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    transition: all 0.3s ease;
+}
 
-    font-size: 0.75rem;
+.subject-tags span:hover {
+    background: rgba(59, 130, 246, 0.12);
+    transform: translateY(-2px);
+}
 
-    font-weight: 500;
+.card-hover-effect {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+}
 
+.hover-icon {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.subject-card:hover .card-hover-effect {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.subject-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+    border-color: rgba(59, 130, 246, 0.2);
+}
+
+.subject-card:hover .subject-icon {
+    transform: scale(1.1) rotate(5deg);
 }
 
 
 
-/* Modern Modal Styles - Using Site Design System */
+/* Responsive Design for Enhanced Prompts Section */
+@media (max-width: 768px) {
+    .interactive-prompts {
+        padding: 4rem 0;
+    }
+    
+    .section-title-prompts {
+        font-size: 2.5rem;
+    }
+    
+    .section-subtitle-prompts {
+        font-size: 1.1rem;
+    }
+    
+    .prompts-stats-bar {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .stat-item {
+        padding: 1.5rem 1rem;
+    }
+    
+    .stat-number {
+        font-size: 2.2rem;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem;
+    }
+    
+    .subject-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .subject-card {
+        padding: 2rem;
+        min-height: 250px;
+    }
+    
+    .subject-icon {
+        font-size: 3rem;
+    }
+    
+    .subject-card h3 {
+        font-size: 1.4rem;
+    }
+    
+    .subject-card p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .interactive-prompts {
+        padding: 3rem 0;
+    }
+    
+    .section-title-prompts {
+        font-size: 2rem;
+    }
+    
+    .section-subtitle-prompts {
+        font-size: 1rem;
+    }
+    
+    .prompts-stats-bar {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .subject-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .subject-card {
+        padding: 1.5rem;
+        min-height: 220px;
+    }
+    
+    .subject-icon {
+        font-size: 2.5rem;
+    }
+    
+    .subject-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .subject-card p {
+        font-size: 0.95rem;
+    }
+    
+    .subject-tags span {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.8rem;
+    }
+}
 
 .modal {
     display: none;
