@@ -2400,10 +2400,6 @@ button:hover,
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2413,7 +2409,7 @@ button:hover,
 }
 
 .hover-icon {
-    color: white;
+    color: #3b82f6;
     font-size: 1.2rem;
     font-weight: bold;
 }
@@ -5163,10 +5159,11 @@ html {
 /* AI Comparison Section Styles */
 
 .ai-comparison {
-
-    padding: 4rem 0;
-
+    padding: 5rem 0;
     background: var(--color-white);
+    color: #1e293b;
+    position: relative;
+    overflow: hidden;
 }
 
 
@@ -5185,10 +5182,18 @@ html {
 
 }
 
-.comparison-intro {
+.ai-comparison .comparison-intro {
     text-align: center;
+    margin-bottom: 3rem;
+}
+
+.ai-comparison .comparison-intro p {
+    color: #475569;
+    font-size: 1.2rem;
+    font-weight: 500;
     max-width: 800px;
-    margin: 0 auto var(--spacing-4xl);
+    margin: 0 auto;
+    line-height: 1.8;
 }
 
 .comparison-intro p {
@@ -5504,9 +5509,9 @@ background-color: var(--color-light);
 /* AI Strategy Framework Styles */
 
 .ai-strategy-framework {
-    padding: 4rem 0;
+    padding: 5rem 0;
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-    color: var(--color-white);
+    color: #ffffff;
     position: relative;
     overflow: hidden;
 }
@@ -5514,17 +5519,14 @@ background-color: var(--color-light);
 .ai-strategy-framework::before {
     content: '';
     position: absolute;
-    top: -100%;
-    left: -100%;
-    width: 300%;
-    height: 300%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: 
-        radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.15) 0%, transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(168, 85, 247, 0.12) 0%, transparent 35%),
-        radial-gradient(circle at 50% 50%, rgba(132, 204, 22, 0.08) 0%, transparent 45%),
-        conic-gradient(from 0deg at 50% 50%, rgba(139, 92, 246, 0.05), rgba(168, 85, 247, 0.08), rgba(132, 204, 22, 0.05), rgba(139, 92, 246, 0.05));
-    animation: floatingGradient 20s ease-in-out infinite;
-    z-index: 1;
+        radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(168, 85, 247, 0.15) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 @keyframes floatingGradient {
@@ -5538,31 +5540,69 @@ background-color: var(--color-light);
 .ai-strategy-framework .container {
     position: relative;
     z-index: 2;
+    max-width: 1200px;
 }
 
 .ai-strategy-framework h2 {
-    color: var(--color-white);
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.ai-strategy-framework h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    border-radius: 2px;
+}
+
+.ai-strategy-framework .framework-content {
+    text-align: center;
 }
 
 .ai-strategy-framework .framework-content > p {
     color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+}
+
+.ai-strategy-framework .strategy-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
 }
 
 .ai-strategy-framework .strategy-step {
     background: 
-        linear-gradient(135deg, rgba(103, 58, 183, 0.25) 0%, rgba(168, 85, 247, 0.15) 100%),
-        linear-gradient(45deg, rgba(255, 255, 255, 0.05) 0%, transparent 100%);
-    border: 1px solid transparent;
-    border-radius: 20px;
-    padding: 2.5rem;
-    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-    position: relative;
-    overflow: hidden;
+        linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%),
+        linear-gradient(45deg, rgba(59, 130, 246, 0.1) 0%, transparent 100%);
     backdrop-filter: blur(10px);
-    box-shadow: 
-        0 10px 30px rgba(139, 92, 246, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.ai-strategy-framework .strategy-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    border-color: rgba(59, 130, 246, 0.3);
 }
 
 
@@ -5592,31 +5632,32 @@ background-color: var(--color-light);
 }
 
 .ai-strategy-framework .step-content h3 {
-    color: var(--color-white);
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .ai-strategy-framework .step-content p {
     color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    text-align: center;
 }
 
 .ai-strategy-framework .step-number {
-    background: #ffffff;
-    color: #1e293b;
-    font-weight: 900;
-    font-size: 1.8rem;
-    width: 70px;
-    height: 70px;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 3px solid var(--color-primary);
-    box-shadow: 
-        0 8px 25px rgba(0, 0, 0, 0.3),
-        0 0 0 1px rgba(139, 92, 246, 0.5),
-        inset 0 2px 4px rgba(255, 255, 255, 0.8),
-        0 0 20px rgba(139, 92, 246, 0.3);
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
     position: relative;
     overflow: hidden;
 }
@@ -5665,12 +5706,14 @@ background-color: var(--color-light);
 }
 
 .ai-strategy-framework .framework-benefit {
-    background: rgba(103, 58, 183, 0.2);
-    border: 1px solid var(--color-primary);
+    background: 
+        linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(37, 99, 235, 0.1) 100%),
+        linear-gradient(45deg, rgba(255, 255, 255, 0.05) 0%, transparent 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     padding: 2rem;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(5px);
+    text-align: center;
     position: relative;
     overflow: hidden;
 }
@@ -5681,10 +5724,16 @@ background-color: var(--color-light);
 
 
 .ai-strategy-framework .framework-benefit p {
-    color: var(--color-white);
-    font-weight: 500;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 0;
     position: relative;
-    z-index: 2;
+}
+
+.ai-strategy-framework .framework-benefit strong {
+    color: #60a5fa;
+    font-weight: 700;
 }
 
 
@@ -6104,22 +6153,54 @@ background-color: var(--color-light);
 /* Responsive Design for New Sections */
 
 @media (max-width: 768px) {
+    .ai-strategy-framework {
+        padding: 3rem 0;
+    }
+    
+    .ai-strategy-framework h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .ai-strategy-framework .framework-content > p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .ai-strategy-framework .strategy-steps {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .ai-strategy-framework .strategy-step {
+        padding: 1.5rem;
+    }
+    
+    .ai-strategy-framework .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .ai-strategy-framework .step-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .ai-strategy-framework .framework-benefit {
+        padding: 1.5rem;
+    }
+    
+    .ai-strategy-framework .framework-benefit p {
+        font-size: 1.1rem;
+    }
 
     .comparison-grid {
-
         grid-template-columns: 1fr;
-
     }
-
-    
 
     .upgrade-triggers {
-
         grid-template-columns: 1fr;
-
     }
-
-    
 
     .strategy-steps {
 
