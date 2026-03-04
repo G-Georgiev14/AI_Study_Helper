@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Разрешаваме достъп до всички файлове
+Allow: /index.html
+Allow: /about.html
+Allow: /privacy.html
+Allow: /terms.html
+Allow: /styles.css
+Allow: /script.js
+Allow: /sitemap.xml
+
+# Блокираме само временни файлове
+Disallow: /*.tmp$
+Disallow: /*.bak$
+Disallow: /temp/
+
+# Sitemap
+Sitemap: https://g-georgiev14.github.io/AI_Study_Helper/sitemap.xml
+
+# Crawl-delay (ако е необходимо)
+# Crawl-delay: 1

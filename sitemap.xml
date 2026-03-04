@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    
+    <!-- Основна страница -->
+    <url>
+        <loc>https://g-georgiev14.github.io/AI_Study_Helper/</loc>
+        <lastmod>2026-03-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- За нас страница -->
+    <url>
+        <loc>https://g-georgiev14.github.io/AI_Study_Helper/about.html</loc>
+        <lastmod>2026-03-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Политика за поверителност -->
+    <url>
+        <loc>https://g-georgiev14.github.io/AI_Study_Helper/privacy.html</loc>
+        <lastmod>2026-03-04</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <!-- Общи условия -->
+    <url>
+        <loc>https://g-georgiev14.github.io/AI_Study_Helper/terms.html</loc>
+        <lastmod>2026-03-04</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+</urlset>
